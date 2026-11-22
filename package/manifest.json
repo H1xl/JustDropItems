@@ -1,0 +1,9 @@
+{
+  "name": "JustDropItems",
+  "version_number": "1.0.0",
+  "website_url": "https://github.com/H1xl/JustDropItems",
+  "description": "Drop items from your inventory or give them to teammates. Pick the amount with the mouse wheel or gamepad, drag onto a player to give. Temporary and Ethereal copies stay so; no Recycler reroll exploit. Needs the host and each player who uses it.",
+  "dependencies": [
+    "bbepis-BepInExPack-5.4.2122"
+  ]
+}

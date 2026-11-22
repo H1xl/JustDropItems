@@ -1,0 +1,6 @@
+bin/
+obj/
+.vs/
+*.user
+paths.local.props
+*.zip

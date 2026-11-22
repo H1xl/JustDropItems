@@ -1,0 +1,36 @@
+<!-- Common build settings of H1xl's mods, imported first by plugin/*.csproj. Machine paths come from
+     paths.local.props in the repository root (copy paths.local.props.example). -->
+<Project>
+  <Import Project="$(MSBuildThisFileDirectory)..\paths.local.props" Condition="Exists('$(MSBuildThisFileDirectory)..\paths.local.props')" />
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <LangVersion>9.0</LangVersion>
+    <Nullable>disable</Nullable>
+    <Optimize>true</Optimize>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <GenerateDependencyFile>false</GenerateDependencyFile>
+    <DebugType>none</DebugType>
+    <SharedDir>$(MSBuildThisFileDirectory)</SharedDir>
+    <!-- Game assemblies, and the reference profile (read only) for BepInEx and other mods' dlls. -->
+    <Managed>$(GameDir)\Risk of Rain 2_Data\Managed</Managed>
+    <Profile>$(ProfilesDir)\$(RefProfile)</Profile>
+    <RefPlugins>$(Profile)\BepInEx\plugins</RefPlugins>
+  </PropertyGroup>
+
+  <!-- Used by every mod. A reference the code never uses is not written into the dll. -->
+  <ItemGroup>
+    <Reference Include="RoR2"><HintPath>$(Managed)\RoR2.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="com.unity.multiplayer-hlapi.Runtime"><HintPath>$(Managed)\com.unity.multiplayer-hlapi.Runtime.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="HGCSharpUtils"><HintPath>$(Managed)\HGCSharpUtils.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine"><HintPath>$(Managed)\UnityEngine.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.CoreModule"><HintPath>$(Managed)\UnityEngine.CoreModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.ImageConversionModule"><HintPath>$(Managed)\UnityEngine.ImageConversionModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="BepInEx"><HintPath>$(Profile)\BepInEx\core\BepInEx.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="MonoMod.RuntimeDetour"><HintPath>$(Profile)\BepInEx\core\MonoMod.RuntimeDetour.dll</HintPath><Private>false</Private></Reference>
+  </ItemGroup>
+
+  <Target Name="CheckLocalPaths" BeforeTargets="BeforeBuild" Condition="!Exists('$(MSBuildThisFileDirectory)..\paths.local.props')">
+    <Error Text="paths.local.props is missing in the repository root: copy paths.local.props.example and fill it in." />
+  </Target>
+</Project>

@@ -1,0 +1,20 @@
+<!-- Level-2 tests: the mod's pure logic (plugin/Logic/*.cs, no Unity or game calls), linked in and run in .NET 8.
+     Run:  dotnet test JustDropItems_mod/tests/unit -->
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>disable</Nullable>
+    <IsPackable>false</IsPackable>
+    <RootNamespace>JustDropItems.Tests</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.1" />
+    <PackageReference Include="xunit" Version="2.9.2" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.8.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="..\..\plugin\Logic\*.cs" Link="Logic\%(Filename)%(Extension)" />
+  </ItemGroup>
+</Project>

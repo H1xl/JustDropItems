@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="..\shared\Common.props" />
+  <PropertyGroup>
+    <AssemblyName>JustDropItems</AssemblyName>
+    <RootNamespace>JustDropItems</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="Rewired_Core"><HintPath>$(Managed)\Rewired_Core.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Rewired_CSharp"><HintPath>$(Managed)\Rewired_CSharp.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.PhysicsModule"><HintPath>$(Managed)\UnityEngine.PhysicsModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.InputLegacyModule"><HintPath>$(Managed)\UnityEngine.InputLegacyModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.UI"><HintPath>$(Managed)\UnityEngine.UI.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.UIModule"><HintPath>$(Managed)\UnityEngine.UIModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.TextRenderingModule"><HintPath>$(Managed)\UnityEngine.TextRenderingModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Unity.TextMeshPro"><HintPath>$(Managed)\Unity.TextMeshPro.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Unity.Addressables"><HintPath>$(Managed)\Unity.Addressables.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Unity.ResourceManager"><HintPath>$(Managed)\Unity.ResourceManager.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="LegacyResourcesAPI"><HintPath>$(Managed)\LegacyResourcesAPI.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="RiskOfOptions"><HintPath>$(RefPlugins)\Rune580-Risk_Of_Options\RiskOfOptions\RiskOfOptions.dll</HintPath><Private>false</Private></Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(SharedDir)Core\Log.cs" Link="Shared\Log.cs" />
+    <Compile Include="$(SharedDir)Core\HookUtil.cs" Link="Shared\HookUtil.cs" />
+    <Compile Include="$(SharedDir)Core\GameMember.cs" Link="Shared\GameMember.cs" />
+    <Compile Include="$(SharedDir)SharedGameMembers.cs" Link="Shared\SharedGameMembers.cs" />
+    <Compile Include="$(SharedDir)Compat\RooHelper.cs" Link="Shared\RooHelper.cs" />
+    <Compile Include="$(SharedDir)Orbs\ItemFlight.cs" Link="Shared\ItemFlight.cs" />
+  </ItemGroup>
+</Project>
