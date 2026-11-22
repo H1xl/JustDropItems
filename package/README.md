@@ -8,10 +8,13 @@ can't be abused to reroll the same item forever.
 see ordinary pickups and flying items.
 
 ## Screenshots
-<img src="https://raw.githubusercontent.com/H1xl/JustDropItems/v1.0.0/docs/images/01-amount.png" alt="The amount window beside a hovered item in the scoreboard" width="100%">
-<img src="https://raw.githubusercontent.com/H1xl/JustDropItems/v1.0.0/docs/images/02-give.png" alt="Dragging an item onto another player in the scoreboard" width="100%">
-<img src="https://raw.githubusercontent.com/H1xl/JustDropItems/v1.0.0/docs/images/03-flight.gif" alt="A given item flies to a teammate as an icon" width="100%">
-<img src="https://raw.githubusercontent.com/H1xl/JustDropItems/v1.0.0/docs/images/04-drop.gif" alt="Dropping items on the ground" width="100%">
+<p><img src="https://raw.githubusercontent.com/H1xl/JustDropItems/v1.0.0/docs/images/01-amount.png" alt="The amount window beside a hovered item in the scoreboard" width="100%"><br><em>The amount window beside a hovered item in the scoreboard</em></p>
+
+<p><img src="https://raw.githubusercontent.com/H1xl/JustDropItems/v1.0.0/docs/images/02-give.png" alt="Dragging an item onto another player in the scoreboard" width="100%"><br><em>Dragging an item onto another player in the scoreboard</em></p>
+
+<p><img src="https://raw.githubusercontent.com/H1xl/JustDropItems/v1.0.0/docs/images/03-flight.gif" alt="A given item flies to a teammate as an icon" width="100%"><br><em>A given item flies to a teammate as an icon</em></p>
+
+<p><img src="https://raw.githubusercontent.com/H1xl/JustDropItems/v1.0.0/docs/images/04-drop.gif" alt="Dropping items on the ground" width="100%"><br><em>Dropping items on the ground</em></p>
 
 ## Features
 - **Choose the amount**: hover an item and turn the mouse wheel. A window beside the icon shows the amount and a bar split into
